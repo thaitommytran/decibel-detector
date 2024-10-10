@@ -1,9 +1,15 @@
-
-
 function App() {
   return (
-    <div className="App">
-    
+    <div className="flex flex-col h-screen bg-gray-900 p-6 overflow-hidden">
+      <div className="absolute inset-0 bg-[#282a36] opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-cyan-900/30" />
+      <div className="relative z-10 flex flex-col h-full">
+        <header className="text-center mb-8">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
+            Decibel Detector
+          </h1>
+        </header>
+      </div>
     </div>
   );
 }
