@@ -1,3 +1,5 @@
+import CircularGauge from "./components/CircularGauge";
+
 function App() {
   return (
     <div className="flex flex-col h-screen bg-gray-900 p-6 overflow-hidden">
@@ -9,6 +11,9 @@ function App() {
             Decibel Detector
           </h1>
         </header>
+        <div className="flex-grow flex flex-col items-center justify-center space-y-12">
+          <CircularGauge />
+        </div>
       </div>
     </div>
   );
