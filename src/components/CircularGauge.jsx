@@ -2,7 +2,7 @@ import React from "react";
 
 const CircularGauge = () => {
   return (
-    <div className="relative w-full h-full p-8">
+    <div className="relative w-80 h-80">
       <svg className="w-full h-full" viewBox="0 0 120 120">
         <defs>
           <filter id="glow">
