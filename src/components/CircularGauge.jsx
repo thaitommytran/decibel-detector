@@ -5,6 +5,7 @@ const CircularGauge = () => {
     <div className="relative w-80 h-80">
       <svg className="w-full h-full" viewBox="0 0 120 120">
         <defs>
+          {/* Blurred glow effect */}
           <filter id="glow">
             <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
             <feMerge>
@@ -12,6 +13,7 @@ const CircularGauge = () => {
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
+          {/* Color gradient for active circle */}
           <linearGradient
             id="draculaGradient"
             x1="0%"
@@ -24,6 +26,7 @@ const CircularGauge = () => {
             <stop offset="100%" stopColor="#8be9fd" />
           </linearGradient>
         </defs>
+        {/* Inactive circle state */}
         <circle
           cx="60"
           cy="60"
@@ -32,6 +35,7 @@ const CircularGauge = () => {
           stroke="#44475a"
           strokeWidth="8"
         />
+        {/* Active circle state */}
         <circle
           cx="60"
           cy="60"
@@ -45,6 +49,7 @@ const CircularGauge = () => {
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center flex-col">
+        {/* Current decibel reading */}
         <span className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">
           100
         </span>
