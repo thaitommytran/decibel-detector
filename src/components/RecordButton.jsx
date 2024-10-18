@@ -13,8 +13,8 @@ const RecordButton = () => {
     <button
       className={`w-20 h-20 rounded-full p-3 ${
         isRecording
-          ? "bg-red-500 hover:bg-red-600"
-          : "bg-green-500 hover:bg-green-600"
+          ? "bg-red-500 hover:bg-red-600" // Red when active to trigger stop
+          : "bg-green-500 hover:bg-green-600" // Green when inactive to trigger start
       } transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center`}
       onClick={toggleRecording}
     >
