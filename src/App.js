@@ -2,6 +2,7 @@ import CircularGauge from "./components/CircularGauge";
 import DecibelStats from "./components/DecibelStats";
 import RecordButton from "./components/RecordButton";
 import SoundWave from "./components/SoundWave";
+import BackgroundParticles from './components/BackgroundParticles';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="absolute inset-0 bg-[#282a36] opacity-90" />
       {/* Gradient background overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-cyan-900/30" />
+      <BackgroundParticles />
       {/* Card container */}
       <div className="relative z-10 flex flex-col h-full rounded-lg border bg-blue-800/15 border-purple-500 py-6 px-4 min-w-[460px] max-w-[620px] w-full">
         {/* App header and title */}
