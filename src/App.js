@@ -1,4 +1,5 @@
 import CircularGauge from "./components/CircularGauge";
+import DecibelStats from './components/DecibelStats';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </header>
         <div className="flex-grow flex flex-col items-center justify-center space-y-12">
           <CircularGauge />
+          <DecibelStats />
         </div>
       </div>
     </div>
