@@ -8,17 +8,13 @@ const SoundWave = () => {
 
         return (
           <div key={index} className="flex flex-col justify-center h-full">
-            {/* Top sound bars */}
             <div
-              className={`w-1 bg-gradient-to-t from-pink-500 to-purple-400 rounded-sm transition-all duration-75 ease-in-out h-[${
-                height / 2
-              }%]`}
+              className="w-1 bg-gradient-to-t from-pink-500 to-purple-400 rounded-sm transition-all duration-75 ease-in-out"
+              style={{ height: `${height / 2}%` }}
             ></div>
-            {/* Bottom sound bars */}
             <div
-              className={`w-1 bg-gradient-to-t from-purple-400 to-pink-500 rounded-sm transition-all duration-75 ease-in-out h-[${
-                height / 2
-              }%]`}
+              className="w-1 bg-gradient-to-t from-purple-400 to-pink-500 rounded-sm transition-all duration-75 ease-in-out"
+              style={{ height: `${height / 2}%` }}
             ></div>
           </div>
         );
