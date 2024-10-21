@@ -2,7 +2,7 @@ import React from "react";
 
 const CircularGauge = () => {
   return (
-    <div className="relative w-80 h-80">
+    <div className="relative w-auto h-auto">
       <svg className="w-full h-full" viewBox="0 0 120 120">
         <defs>
           {/* Blurred glow effect */}

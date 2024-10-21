@@ -2,8 +2,8 @@ import React from "react";
 
 const SoundWave = () => {
   return (
-    <div className="flex items-center justify-between h-40 w-full bg-gray-900 border-purple-500 border rounded-md overflow-hidden">
-      {[...Array(60)].map((_, index) => {
+    <div className="flex items-center justify-between min-h-20 h-40 w-full bg-gray-900 border-purple-500 border rounded-md overflow-hidden">
+      {[...Array(80)].map((_, index) => {
         const height = Math.random() * (90 - 10) + 10;
 
         return (
