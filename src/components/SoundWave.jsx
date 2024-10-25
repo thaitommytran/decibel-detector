@@ -13,6 +13,7 @@ const SoundWave = () => {
               className="w-1 bg-gradient-to-t from-pink-500 to-purple-400 rounded-sm transition-all duration-75 ease-in-out"
               style={{ height: `${height / 2}%` }}
             ></div>
+
             {/* Bottom half of soundwave */}
             <div
               className="w-1 bg-gradient-to-t from-purple-400 to-pink-500 rounded-sm transition-all duration-75 ease-in-out"

@@ -13,6 +13,7 @@ const CircularGauge = () => {
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
+
           {/* Color gradient for active circle */}
           <linearGradient
             id="draculaGradient"
@@ -26,6 +27,7 @@ const CircularGauge = () => {
             <stop offset="100%" stopColor="#8be9fd" />
           </linearGradient>
         </defs>
+
         {/* Inactive circle state */}
         <circle
           cx="60"
@@ -35,6 +37,7 @@ const CircularGauge = () => {
           stroke="#44475a"
           strokeWidth="8"
         />
+
         {/* Active circle state */}
         <circle
           cx="60"
