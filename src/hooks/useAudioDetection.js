@@ -74,5 +74,26 @@ export const useAudioDetection = () => {
     return () => cancelAnimationFrame(animationFrame);
   }, [analyzer, isRecording]);
 
-  return { currentDecibel, averageDecibel, maxDecibel, isRecording };
+  // Average decibel calculation effect
+  useEffect(() => {
+    if (decibelHistory.length > 0) {
+      const average = Math.round(
+        decibelHistory.reduce((a, b) => a + b) / decibelHistory.length
+      );
+      setAverageDecibel(average);
+    }
+  }, [decibelHistory]);
+
+  // Function to toggle recording state
+  const toggleRecording = () => {
+    isRecording ? stopRecording() : startRecording();
+  };
+
+  return {
+    currentDecibel,
+    averageDecibel,
+    maxDecibel,
+    isRecording,
+    toggleRecording,
+  };
 };
