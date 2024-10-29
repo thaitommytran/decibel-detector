@@ -1,6 +1,6 @@
 import React from "react";
 
-const CircularGauge = () => {
+const CircularGauge = ({ currentDecibel }) => {
   return (
     <div className="relative w-auto h-auto">
       <svg className="w-full h-full" viewBox="0 0 120 120">

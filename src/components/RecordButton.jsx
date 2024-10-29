@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import micOn from "../assets/micOn.png";
 import micOff from "../assets/micOff.png";
 
-const RecordButton = () => {
-  const [isRecording, setIsRecording] = useState(false);
-
-  const toggleRecording = () => {
-    setIsRecording(!isRecording);
-  };
-
+const RecordButton = ({ isRecording, toggleRecording }) => {
   return (
     <button
       className={`w-20 h-20 rounded-full p-3 ${

@@ -1,6 +1,6 @@
 import React from "react";
 
-const DecibelStats = () => {
+const DecibelStats = ({ averageDecibel, maxDecibel }) => {
   return (
     <div className="flex justify-center space-x-8">
       {/* Average decibel reading */}
