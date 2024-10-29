@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import calculateDecibels from "../utils/calculateDecibels";
 
-export const useAudioDetection = () => {
+export default function useAudioDetection() {
   const [decibelHistory, setDecibelHistory] = useState([]);
   const [currentDecibel, setCurrentDecibel] = useState(0);
   const [averageDecibel, setAverageDecibel] = useState(0);
@@ -96,4 +96,4 @@ export const useAudioDetection = () => {
     isRecording,
     toggleRecording,
   };
-};
+}
