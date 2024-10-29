@@ -3,8 +3,17 @@ import CircularGauge from "./components/CircularGauge";
 import DecibelStats from "./components/DecibelStats";
 import RecordButton from "./components/RecordButton";
 import SoundWave from "./components/SoundWave";
+import useAudioDetection from "./hooks/useAudioDetection";
 
 function App() {
+  const {
+    currentDecibel,
+    averageDecibel,
+    maxDecibel,
+    isRecording,
+    toggleRecording,
+  } = useAudioDetection();
+
   return (
     <div className="flex flex-col h-screen bg-gray-900 p-6 overflow-hidden items-center">
       {/* Solid background color */}
@@ -22,10 +31,16 @@ function App() {
           </h1>
         </header>
         <div className="flex flex-col items-center justify-around h-full p-2 gap-4">
-          <CircularGauge />
-          <DecibelStats />
+          <CircularGauge currentDecibel={currentDecibel} />
+          <DecibelStats
+            averageDecibel={averageDecibel}
+            maxDecibel={maxDecibel}
+          />
           <SoundWave />
-          <RecordButton />
+          <RecordButton
+            isRecording={isRecording}
+            toggleRecording={toggleRecording}
+          />
         </div>
       </div>
     </div>
